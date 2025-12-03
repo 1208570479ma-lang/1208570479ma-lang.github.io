@@ -1,0 +1,31 @@
+:root{
+  --bg:#f6f8fa;
+  --card:#ffffff;
+  --accent:#0b6e4f;
+  --muted:#6b7280;
+  --danger:#b91c1c;
+  --maxw:980px;
+  --radius:12px;
+  --gap:24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+html,body{height:100%;margin:0;background:var(--bg);color:#111827}
+.wrap{max-width:var(--maxw);margin:40px auto;padding:24px}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.08);padding:28px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:start}
+h1{font-size:1.6rem;margin:0 0 8px 0;line-height:1.2;color:#052f2a}
+h2{font-size:1rem;margin:0;color:var(--muted);line-height:1.6}
+p{margin:0 0 12px 0;color:#111827}
+.highlight{color:var(--danger)}
+.meta{font-size:0.9rem;color:var(--muted);margin-bottom:12px}
+@media (max-width:800px){
+  .grid{grid-template-columns:1fr}
+  .wrap{margin:20px;padding:16px}
+}
+
+/* Stopwatch styles */
+.stopwatch{display:flex;align-items:center;gap:12px;margin-top:16px}
+.sw-display{font-family:monospace;background:#f3f4f6;border:1px solid #e5e7eb;padding:8px 12px;border-radius:6px;font-size:1.05rem}
+.sw-btn{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:600}
+.sw-btn.running{background:#ef4444}
+.sw-btn:active{transform:translateY(1px)}
